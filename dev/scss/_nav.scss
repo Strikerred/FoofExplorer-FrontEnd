@@ -2,13 +2,14 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: $backGroundColorLight;
-    padding: 5px 10px 9px;
+    background-color: $backgroundColorLight;
+    padding-bottom: 9px;
     
     .logo {
         border: 1px solid $headerBackground;
         width: 53px;
-        height: 40px;
+        height: 35px;
+        margin: 5px 0 0 10px;
 
         img{
             display: block;
@@ -18,7 +19,42 @@ header {
     }
 
     .hamburger-menu {
-        background-color: red;
+        background-color: $backgroundColorLight;
+        border: none;
+        padding: 0;
+        width: 34px;
+        height: 28px;
+        margin: 10px 10px 0 0;
+
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    nav {
+        display: block;
+        width: 100%;
+
+        ul{
+            margin: 0;
+            padding: 0;
+            display: block;
+            list-style: none;
+            background-color: $headerBackground;
+            line-height: 2em;
+            
+        }
+
+        li:first-child{
+            background-color: grey;
+
+            @at-root li {
+                background-color: grey;
+            }
+        }
+
 
     }
 }
