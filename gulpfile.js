@@ -1,4 +1,4 @@
-// TWD Group Project Gulpfile - version 6.0.0
+// SSD Group Project Gulpfile - version 6.0.0
 // Created by: Michael Whyte
 
 // This Gulpfile is modified from code found here:
@@ -98,8 +98,8 @@ files.fonts  = `${folders.fontsDev}/**/*`;
 // 3. Injects CSS into the browser (dev mode)
 // 4. Compresses the CSS files (build mode)
 // 5. Copies CSS files to the dist styles folder
-function sassTask(){    
-  return src(files.sass)
+function sassTask(done){    
+     return src(files.sass)
     .pipe(gulpif(devMode, sourcemaps.init())) // Initializes sourcemaps (dev mode) 
     .pipe(sass().on('error', sass.logError)) // compiles SCSS to CSS
     .pipe(gulpif(devMode, postcss([autoprefixer()]))) // Adds CSS prefixes (dev mode)
@@ -108,7 +108,8 @@ function sassTask(){
     .pipe(gulpif(devMode, browserSync.stream())) // Injects new CSS to the browser (dev mode)
     .pipe(gulpif(buildMode, postcss([autoprefixer(), cssnano()]))) // Adds CSS prefixes and compresses CSS (build mode)
     .pipe(gulpif(buildMode, dest(folders.stylesDist))); // Copies CSS files to dist styles folder (build mode)
-}
+    //done();
+  }
 
 // JS Task: 
 // 1. Concatenates JS files
@@ -121,7 +122,7 @@ function jsTask(){
     .pipe(gulpif(devMode, sourcemaps.write('.'))) // Writes sourcemaps (dev mode)
     .pipe(gulpif(devMode, dest(folders.jsDev))) // Puts concatenated JS file in dev scripts folder (dev mode)
     .pipe(gulpif(buildMode, uglify())) // Compresses JS file (build mode)
-    .pipe(gulpif(buildMode, dest(folders.jsDistFolder))); // Copies concatenated and compressed JS file to the dist scripts folder (build mode)
+    .pipe(gulpif(buildMode, dest(folders.jsDist))); // Copies concatenated and compressed JS file to the dist scripts folder (build mode)
 }
 
 // jQuery Task:
@@ -149,7 +150,7 @@ function htmlTask(){
 function imagesTask(){
   return src(files.images)
 		.pipe(cache(imageMin({interlaced: true}))) // Compresses images
-		.pipe(dest(folders.imagesDistFolder)); // Copies compressed images to the dist images folder
+		.pipe(dest(folders.imagesDist)); // Copies compressed images to the dist images folder
 }
 
 // Fonts Task:
