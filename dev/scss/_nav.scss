@@ -2,7 +2,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: $backgroundColorLight;
+    background-color: $backGroundColorLight;
     padding-bottom: 9px;
     
     .logo {
@@ -19,7 +19,7 @@ header {
     }
 
     .hamburger-menu {
-        background-color: $backgroundColorLight;
+        background-color: $backGroundColorLight;
         border: none;
         padding: 0;
         width: 34px;
@@ -51,7 +51,7 @@ header {
             background-color: grey;
 
             @at-root li {
-                background-color: grey;
+                background-color: $headerBackground;
             }
         }
 
