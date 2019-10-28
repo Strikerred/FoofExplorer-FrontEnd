@@ -11,7 +11,8 @@ header {
         height: 35px;
         margin: 5px 0 0 10px;
 
-        img{
+        img,
+        @at-root .hamburger-menu img{
             display: block;
             width: 100%;
             height: 100%;;
@@ -25,17 +26,12 @@ header {
         width: 34px;
         height: 28px;
         margin: 10px 10px 0 0;
-
-        img{
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
     }
 
     nav {
         display: block;
         width: 100%;
+        padding-top: 5px;
 
         ul{
             margin: 0;
@@ -44,17 +40,56 @@ header {
             list-style: none;
             background-color: $headerBackground;
             line-height: 2em;
+            border: 1px solid $navBorderBottom;
             
-        }
-
-        li:first-child{
-            background-color: grey;
-
-            @at-root li {
+            li {
                 background-color: $headerBackground;
+                text-align: center;
+                border-bottom: 1px solid $navBorderBottom;
+    
+                a{
+                    text-decoration: none;
+                    display: block;
+                    color: $backGroundColorLight;
+                }
+
+                &:first-child{
+                    text-align: left;
+                    position: relative;
+                    background-color: $backGroundColorLight;
+                    
+                    input {
+                        display: block;
+                        width: 100%;
+                        background-color: $textBoxGrey;
+                        border: none;
+                        outline: none;
+                        line-height: 32px;
+                        padding-left: 10px;
+                        border-radius: 5px;
+                    }
+    
+                    img{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 10px;
+                        width: 1.3em;
+                    }
+                    
+                }
+
+                &:last-child{
+                    background-color: $backGroundColorLight;
+                    border-bottom: none;;
+    
+                    i{
+                        color: $headerBackground;
+                        padding: 0 5px;
+    
+                    }
+                }
             }
         }
-
-
     }
 }
