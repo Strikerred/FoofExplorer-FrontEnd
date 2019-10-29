@@ -3,7 +3,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: $backGroundColorLight;
-    padding-bottom: 9px;
     
     .logo {
         border: 1px solid $headerBackground;
@@ -11,11 +10,10 @@ header {
         height: 35px;
         margin: 5px 0 0 10px;
 
-        img,
-        @at-root .hamburger-menu img{
+        img{
             display: block;
             width: 100%;
-            height: 100%;;
+            height: 100%;
         }
     }
 
@@ -26,6 +24,12 @@ header {
         width: 34px;
         height: 28px;
         margin: 10px 10px 0 0;
+
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     nav {
@@ -33,7 +37,40 @@ header {
         width: 100%;
         padding-top: 5px;
 
-        ul{
+        .search{
+            background-color: $headerBackground;
+            line-height: 2em;
+            border: 1px solid $navBorderBottom;
+            border-bottom: none;
+
+            form {
+                text-align: left;
+                position: relative;
+                background-color: $backGroundColorLight;
+                
+                input {
+                    display: block;
+                    width: 100%;
+                    background-color: $textBoxGrey;
+                    border: none;
+                    outline: none;
+                    line-height: 32px;
+                    padding-left: 10px;
+                    border-radius: 5px;
+                    font-family: $robotoBold;
+                }
+    
+                img{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                    width: 1.3em;
+                }
+            }
+        }
+
+        .menu{
             margin: 0;
             padding: 0;
             display: block;
@@ -41,6 +78,7 @@ header {
             background-color: $headerBackground;
             line-height: 2em;
             border: 1px solid $navBorderBottom;
+            z-index: 1;
             
             li {
                 background-color: $headerBackground;
@@ -51,43 +89,72 @@ header {
                     text-decoration: none;
                     display: block;
                     color: $backGroundColorLight;
-                }
-
-                &:first-child{
-                    text-align: left;
-                    position: relative;
-                    background-color: $backGroundColorLight;
+                    font-family: $robotoBold;
                     
-                    input {
-                        display: block;
-                        width: 100%;
-                        background-color: $textBoxGrey;
-                        border: none;
-                        outline: none;
-                        line-height: 32px;
-                        padding-left: 10px;
-                        border-radius: 5px;
+                    #{$lhs} {//#concatenates a:hover, a:focus, a:active 
+                        background-color: $backGroundColorLight;
+                        color: $headerBackground;
                     }
-    
-                    img{
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 10px;
-                        width: 1.3em;
-                    }
-                    
                 }
 
                 &:last-child{
-                    background-color: $backGroundColorLight;
-                    border-bottom: none;;
+                    border-top: none;
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .social {
+            margin: 0;
+            background-color: $backGroundColorLight;
+            border: 1px solid $navBorderBottom;
+            line-height: 2em;
+            height: 32px;
+            border-top: none;
+            list-style: none;
+            padding: 0;
+            overflow-y: hidden;
+            display: flex;
+            justify-content: center;
+
+            li{
+                position: relative;
+                height: 32px; 
+                transition: all 0.3s;
+
+                #{$hover}{
+                    transform: translateY(-27px);
+                }
+
+                &:first-child{
+                    margin: 0 25px;
+                }
     
-                    i{
-                        color: $headerBackground;
-                        padding: 0 5px;
+                &:nth-child(2){
+                    margin-left: 15px;
+                }
     
-                    }
+                &:last-child{
+                    margin-left: 30px;
+                }
+
+                span:first-child{
+                    display: block;
+                    position: absolute;
+                    font-size: 1.3em;
+                    color: $headerBackground;
+                    right: 50%;
+                    transform: translateX(-50%);
+                }
+
+                span:last-child{
+                    display: block;
+                    font-size: 1.3em;
+                    color: $textBoxGrey;  
+                    position: absolute;
+                    right: 50%;
+                    transform: translateX(-50%);
+                    top:27px;  
                 }
             }
         }
