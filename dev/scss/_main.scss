@@ -1,5 +1,10 @@
 body{
-    background-image:url('../images/bg.jpg');
-    background-size:cover;
-    
+    background-image:$bodyBackgroundImage;
+
+    .wrapper{
+        padding: 10px;
+    }
 }
+
+
+
