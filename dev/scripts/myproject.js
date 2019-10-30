@@ -1,5 +1,3 @@
-
-
 //JavaScript Document
 
 // Responsive Menu - Dropdown
@@ -22,7 +20,7 @@ btnMenu.addEventListener('mousedown', function(e){
 
 function openMenu(){
     body.classList.toggle('show');
-	nav.classList.add('activated');
+	// nav.classList.add('activated');
 }
 
 // Media Query Event Listener
@@ -51,6 +49,6 @@ function removeTransition(e){
 	// list set above matches or not
 	if(e.matches){
 		body.classList.remove('show');
-		nav.classList.remove('activated');
+		// nav.classList.remove('activated');
 	}
 }

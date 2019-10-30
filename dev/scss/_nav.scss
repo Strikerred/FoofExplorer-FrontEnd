@@ -32,20 +32,20 @@ header {
         }
     }
 
-    .main-navigation{
+    #main-navigation{
         visibility: hidden;
         overflow: hidden;
-        transition: height 0.3s ease, visibility 0s;
+        height: 0;
+        transition: height 0.3s ease, visibility 0.3s;
     }
     
     @at-root .show {
         
-        .main-navigation{
+        #main-navigation{
             visibility: visible;
-            transition: height 0.3s ease, visibility 0.3s;
-            height: 278px;
+            transition: height 0.3s ease, visibility 0s;
+            height: 238px;
         }
-    
     }    
 
     nav {
