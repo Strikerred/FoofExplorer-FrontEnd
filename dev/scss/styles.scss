@@ -2,14 +2,18 @@
 
 // Place your Sass imports here...
 @import "variables";
+@import "mixins";
+@import "reset";
 @import "footer";
 @import "header";
 @import "nav";
 @import "main";
 @import "hamburger";
-@import "reset";
+
+
 @import "fontawesome/fontawesome.scss";
 @import "fontawesome/brands.scss";
+
 
 
 

@@ -8,21 +8,23 @@ header {
         margin: 0;
         width: 70%;
         height: 35px;
-        margin: 0 0 5px 10px;
+        padding-left: 10px;
         
         picture{
-            padding-top: 10px;
+            padding: 10px 0 5px 0;
             display: block;
           }
     }
-
+    .search-header{
+        display:none;
+    }
     .hamburger-menu {
         background-color: $backGroundColorLight;
         border: none;
         padding: 0;
         width: 34px;
         height: 28px;
-        margin: 10px 10px 0 0;
+        margin: 12px 10px 0 0;
 
         img{
             display: block;
@@ -48,10 +50,10 @@ header {
     }    
 
     nav {
+        padding-top: 8px;
         display: block;
         width: 100%;
-        padding-top: 5px;
-
+        
         .search{
             background-color: $headerBackground;
             line-height: 2em;
@@ -121,7 +123,7 @@ header {
                     border-bottom: none;
                 }
             }
-        }
+        }//dropdown menu
 
         .social {
             margin: 0;
@@ -175,8 +177,50 @@ header {
                     transform: translateX(-50%);
                     top:27px;  
                 }
-            }
-        }
+            }//li
+        }//social
+    }//nav
+
+    
+
+
+        // display: block;
+        // height: $height;
+        // border-top: $border;
+
+        // ul {
+        //     display: flex;
+        // }
+
+        // li {
+        //     flex: 1;
+        // }
+
+        // a {
+        //     line-height: $height;
+        //     border-right: $border;
+        //     border-top: $border;
+        //     @at-root nav li:last-child a {
+        //         border-right: none;
+        //     }
+        // }
+        
+    
+}//header 
+
+@include mq($largePhone) {
+    
+    .hamburger-menu{
+        display: none;
+    }
+    .search-header{
+        display:block;
+    }
+
+    #main-navigation{
+        visibility: visible;
+        overflow: visible;
+        height: 0;
+        transition: height 0.3s ease, visibility 0.3s;
     }
 }
-
