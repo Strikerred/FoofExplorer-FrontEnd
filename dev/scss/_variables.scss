@@ -22,3 +22,12 @@ $robotoLight:'Roboto', sans-serif;
 //hovers
 $lhs: '&:hover, &:focus, &:active';
 $hover:'&:hover';
+
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
+
+//Media Query Breakpoints
+$phoneSmall: em(330);

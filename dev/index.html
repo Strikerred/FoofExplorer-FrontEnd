@@ -19,10 +19,17 @@
 
 <body>
 	<header>
-		<a class="logo" href="#0"><img src="images/favicon.ico" alt="logo"></a>
+		
+		<a class="logo" href="#0">
+			<picture>
+				<source srcset="images/logo.png" media="(min-width: 330px)">
+				<img src="images/small_logo.jpg" alt="logo">
+			</picture>
+		</a>
 		<button class="hamburger-menu" id="btn-menu">
 			<img src="images/menu.png" alt="logo">
 		</button>
+
 		<nav id="main-navigation">
 			<div class="search">
 				<form action="">
