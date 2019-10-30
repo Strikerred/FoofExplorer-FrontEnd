@@ -1,15 +1,23 @@
 body{
     background-image:$bodyBackgroundImage;
 
-    .wrapper{
+    .main-dishes{
         padding: 10px;
+        max-width: 1020px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 30px;
 
         figure{
             position: relative;
 
             &:before{
+                content: "";
+                display: block;
                 padding-bottom: calc(100% / (3 / 2) );
                 height: 0;
+                width: 1px;
             }
 
             img{
