@@ -5,16 +5,15 @@ header {
     background-color: $backGroundColorLight;
     
     .logo {
-        border: 1px solid $headerBackground;
-        width: 53px;
+        margin: 0;
+        width: 70%;
         height: 35px;
-        margin: 5px 0 0 10px;
-
-        img{
+        margin: 0 0 5px 10px;
+        
+        picture{
+            padding-top: 10px;
             display: block;
-            width: 100%;
-            height: 100%;
-        }
+          }
     }
 
     .hamburger-menu {
