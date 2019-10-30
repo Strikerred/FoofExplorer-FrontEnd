@@ -76,12 +76,16 @@ header {
                     font-family: $robotoBold;
                 }
     
-                img{
+                button {
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
                     right: 10px;
-                    width: 1.3em;
+                    padding: 0;
+                    background: none;
+                    border: none;
+                    width: 1.6em;
+                    cursor: pointer;
                 }
             }
         }

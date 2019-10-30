@@ -6,6 +6,7 @@ body{
 
         figure{
             position: relative;
+            margin-bottom: 5px;
 
             img{
                 display: block;
@@ -16,8 +17,13 @@ body{
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                line-height: 2em;
                 display: block;
+                width: 100%;
                 color: $backGroundColorLight;
+                background-color: $bottomHeader;
+                padding-left: 5px;
+
             }
         }
     }
