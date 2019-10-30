@@ -1,15 +1,18 @@
 footer{
     background-color:$footerBlue;
     display:flex;
+    justify-content:center;
+    align-items:center;
     height:58px;
     color:white;
+    padding-left:9px;
+    padding-right:9px;
+
     
     
    
     p{
-        padding-top:10px;
-        margin-left:10px;
         text-align:center;
-       font-family:$robotoLight;
+        font-family:$robotoLight;
     }
 }
