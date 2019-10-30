@@ -1,13 +1,15 @@
 footer{
     background-color:$footerBlue;
-    display:block;
+    display:flex;
     height:58px;
     color:white;
     
-    padding-left:10px;
-    padding-right:10px;
+    
+   
     p{
         padding-top:10px;
-       font-family:$robotoLight
+        margin-left:10px;
+        text-align:center;
+       font-family:$robotoLight;
     }
 }
