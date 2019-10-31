@@ -102,6 +102,7 @@ body{
 
     .countries{
         margin-bottom: 10px;
+
         h1{
             @include headers;
             background-color: $headerBackground;
@@ -117,6 +118,60 @@ body{
                     line-height: 1.72em;
                     font-family: $robotoBold;
                     font-size: 1.10em;
+                }
+            }
+
+            @include mq($smallTablet) {
+
+                ul{
+                    display: grid;//462px
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(6, 1fr);
+
+                    .cambodia {
+                        grid-row: 1 / 2;
+                        grid-column: 3 / 4;
+                    }
+
+                    .asian{
+                        grid-row: 1 / 2;
+                        grid-column: 2 / 3;
+                    }
+
+                    .chinese {
+                        grid-row: 2 / 3;
+                        grid-column: 1 / 2;
+                    }
+
+                    .french{
+                        grid-row: 2 / 3;
+                        grid-column: 3 / 4;
+                    }
+
+                    .greek{
+                        grid-row: 3 / 4;
+                        grid-column: 2 / 3;
+                    }
+
+                    .italian{
+                        grid-row: 4 / 5;
+                        grid-column: 1 / 2;
+                    }
+
+                    .japanese{
+                        grid-row: 4 / 5;
+                        grid-column: 3 / 4;
+                    }
+
+                    .malasyian{
+                        grid-row: 5 / 6;
+                        grid-column: 2 / 3;
+                    }
+
+                    .mexican{
+                        grid-row: 6 / 7;
+                        grid-column: 1 / 2;
+                    }
                 }
             }
         }
@@ -135,7 +190,7 @@ body{
                 font-family: $robotoBold;
                 font-weight: normal;
                 line-height: 1.25em;
-                font-size: 2.1em;
+                font-size: 2em;
             }
 
             p{
@@ -143,7 +198,7 @@ body{
                 font-family: $robotoLight;
                 font-weight: normal;
                 line-height: 1.25em;
-                font-size: 0.925em;
+                font-size: 0.9em;
                 padding-bottom: 20px;
             }
 

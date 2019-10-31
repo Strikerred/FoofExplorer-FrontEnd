@@ -31,5 +31,34 @@ header {
             @include transitions-h-v;
             height: 241px;
         }
-    }    
+    }
+    
+    @include mq($smallTablet) {
+
+        #main-navigation{
+            margin-top: 5px;
+            visibility: visible;
+            @include transitions-none;
+            display: flex;
+            height: 90px;
+            position: relative;
+        } 
+
+        @at-root .show {
+        
+            #main-navigation{
+                visibility: visible;
+                @include transitions-none;
+                height: 90px;
+            }
+        }
+
+        @at-root header {
+            position: relative;
+        }
+
+        .logo{
+            position: absolute;
+        }
+    }
 }

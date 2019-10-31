@@ -29,6 +29,10 @@
     transition: height 0.3s ease, visibility 0.3s;
 }
 
+@mixin transitions-none {
+    transition: none;
+}
+
 //Borders
 
 @mixin borders-y-none{

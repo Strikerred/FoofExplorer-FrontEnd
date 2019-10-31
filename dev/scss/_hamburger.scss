@@ -13,7 +13,7 @@
     }
 }
 
-@include mq($largePhone) {
+@include mq($smallTablet) {
 
     .hamburger-menu{
         display: none;

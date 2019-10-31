@@ -1,7 +1,6 @@
-   nav {
-        padding-top: 8px;
-        display: block;
-        width: 100%;
+nav {
+    padding-top: 8px;
+    @include full-size-image;
         
         .search{
             background-color: $headerBackground;
@@ -112,13 +111,35 @@
             }
         }
 
-    @include mq($largePhone) {
+    @include mq($smallTablet) {
 
-        #main-navigation{
-            
-            visibility: visible;
-            @include transitions-h-v;
-            height: auto;
+        .social{
+            visibility: hidden;
+            overflow: hidden;
+            position: absolute;
+            right: 10px;
+
+            li{
+                transition: none;
+            }
+        }
+
+        .menu{
+            display: flex;
+            width: 100%;
+            align-self: flex-end;
+
+            li{
+                width: 100%;
+            }
+        }
+
+        .search{
+            position: absolute;
+            right: 10px;
+            width: 30%;
+            border: none;
+            transition: none;
         }
     }
 }
