@@ -100,12 +100,12 @@
                 }
 
                 span:first-child{
-                    @include social-media-position;
+                    @include social-media-style;
                     color: $headerBackground;
                 }
 
                 span:last-child{
-                    @include social-media-position;                 
+                    @include social-media-style;                 
                     color: $socialMediaGrey;  
                     top:27px;  
                 }
