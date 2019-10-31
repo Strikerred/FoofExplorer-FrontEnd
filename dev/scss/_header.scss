@@ -1,3 +1,35 @@
-header{
-    display:block;
+header {
+    @include flexWrapSpaceBtwn;
+    background-color: $backGroundColorLight;
+
+    .logo {
+        margin: 0;
+        width: 70%;
+        height: 35px;
+        padding-left: 10px;
+        
+        picture{
+            padding: 10px 0 5px 0;
+            display: block;
+          }
+    }
+    .search-header{
+        display: none;
+    }
+
+    #main-navigation{
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        @include transitions-h-v;
+    }
+    
+    @at-root .show {
+        
+        #main-navigation{
+            visibility: visible;
+            @include transitions-h-v;
+            height: 241px;
+        }
+    }    
 }

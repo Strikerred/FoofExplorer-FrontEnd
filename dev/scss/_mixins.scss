@@ -5,3 +5,38 @@
         @content;
     }
 }
+
+//Flex
+
+@mixin flexWrapSpaceBtwn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin flexWrapCenter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+//transitions
+@mixin transitions-h-v {
+    transition: height 0.3s ease, visibility 0.3s;
+}
+
+//Borders
+
+@mixin borders-y-none{
+    border-top: none;
+    border-bottom: none;
+}
+
+//social media style
+@mixin social-media-style{
+    display: block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(-50%); 
+    font-size: 1.3em;  
+}
