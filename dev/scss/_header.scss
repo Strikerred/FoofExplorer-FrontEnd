@@ -1,6 +1,8 @@
 header {
     @include flexWrapSpaceBtwn;
     background-color: $backGroundColorLight;
+    max-width: 1000px;
+    margin: 0 auto;
 
     .logo {
         margin: 0;
@@ -59,6 +61,18 @@ header {
         @at-root header {
             position: relative;
             height: 98px;
+        }
+    }
+
+    @include mq($dektopLayout) {
+        @at-root header {
+            position: static;
+            height: auto;
+        }
+        
+        .logo{
+            position: static;
+            margin-bottom: 11px;
         }
     }
 }

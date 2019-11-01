@@ -71,7 +71,7 @@ nav {
             background-color: $backGroundColorLight;
             border: 1px solid $navBorderBottom;
             line-height: 2em;
-            height: 32px;
+            height: 31.4px;
             border-top: none;
             padding: 0;
             overflow: hidden;
@@ -161,6 +161,32 @@ nav {
         .search{
             right: 130px;
             width: 28%;
+        }
+    }
+
+    @include mq($dektopLayout) {
+        .search{
+            position: static;
+            width: 35%;
+            order: 3;
+
+            form{
+                input{
+                    border-radius: 0;
+                }
+            }
+        }
+
+        .social{
+        bottom: 45px;
+        }
+
+        .menu{
+            order: 2;
+
+            li{
+                border-bottom: none;
+            }
         }
     }
 }

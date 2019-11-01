@@ -24,14 +24,6 @@ $robotoLight:'Roboto', sans-serif;
 $lhs: '&:hover, &:focus, &:active';
 $hover:'&:hover';
 
-// Media Query Breakpoints
-// $desktopMedium: em(1250);
-// $tabletLandscape: em(1024);
-// $tabletPortrait: em(850);
-// $phoneLandscape: em(670);
-// $phonePortrait: em(420);
-
-
 // Function to
 // Convert Px to Ems
 @function em($px, $bc: 16){
