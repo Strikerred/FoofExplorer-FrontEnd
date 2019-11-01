@@ -139,7 +139,28 @@ nav {
             right: 10px;
             width: 30%;
             border: none;
-            transition: none;
+
+            input{
+                @include box-shadow;
+            }
+        }
+    }
+
+    @include mq($largeTablet) {
+        .social{
+            visibility: visible;
+            position: absolute;
+            right: 10px;
+            border: none;
+            
+            li:last-child{
+                margin-left: 35px;
+            }
+        }
+
+        .search{
+            right: 130px;
+            width: 28%;
         }
     }
 }

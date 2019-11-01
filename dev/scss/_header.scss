@@ -13,9 +13,6 @@ header {
             display: block;
           }
     }
-    .search-header{
-        display: none;
-    }
 
     #main-navigation{
         visibility: hidden;
@@ -38,27 +35,30 @@ header {
         #main-navigation{
             margin-top: 5px;
             visibility: visible;
-            @include transitions-none;
+            overflow: visible;
             display: flex;
-            height: 90px;
+            height: auto;
             position: relative;
         } 
-
-        @at-root .show {
         
-            #main-navigation{
-                visibility: visible;
-                @include transitions-none;
-                height: 90px;
-            }
-        }
-
         @at-root header {
             position: relative;
+            height: 90px;
         }
 
         .logo{
             position: absolute;
+        }
+    }
+
+    @include mq($largeTablet) {
+        .logo{
+            width: 43%;
+        }
+
+        @at-root header {
+            position: relative;
+            height: 98px;
         }
     }
 }

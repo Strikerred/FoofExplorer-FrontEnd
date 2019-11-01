@@ -26,7 +26,11 @@
 
 //transitions
 @mixin transitions-h-v {
-    transition: height 0.3s ease, visibility 0.3s;
+    transition: height 0.3s ease-in-out, visibility 0.3s;
+}
+
+@mixin transitions-h-v-none{
+    transition: height 0s ease, visibility 0s;
 }
 
 @mixin transitions-none {
@@ -63,4 +67,9 @@
     font-size: 1.4em;
     line-height: 2.25em;
     padding-left: 10px;
+}
+
+//Box shadow
+@mixin box-shadow{
+    box-shadow: inset 0px 0px 5px 0px darkgray;
 }

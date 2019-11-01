@@ -12,7 +12,7 @@ function openMenu(){
     body.classList.toggle('show');
 }
 
-const mql = window.matchMedia('(min-width: 560px)');
+const mql = window.matchMedia('(min-width: 500px)');
 
 mql.addListener(removeTransition);
 
