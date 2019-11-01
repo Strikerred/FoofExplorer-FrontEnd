@@ -225,7 +225,7 @@ body{
         }
     }
 
-    @include mq($largeTablet) {
+    @include mq($topMain){
         .main-dishes{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -236,6 +236,9 @@ body{
                 grid-column: 1 / 3;
             }
         }
+    }
+
+    @include mq($largeTablet) {
 
         .secondary-dishes{
     
