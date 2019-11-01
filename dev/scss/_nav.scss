@@ -128,9 +128,12 @@ nav {
             display: flex;
             width: 100%;
             align-self: flex-end;
+            border: none;
+            
 
             li{
                 width: 100%;
+                border: none;              
             }
         }
 
@@ -169,10 +172,12 @@ nav {
             position: static;
             width: 35%;
             order: 3;
+            z-index: 2;
 
             form{
                 input{
                     border-radius: 0;
+                    line-height: 30px;
                 }
             }
         }
@@ -183,10 +188,6 @@ nav {
 
         .menu{
             order: 2;
-
-            li{
-                border-bottom: none;
-            }
         }
     }
 }
