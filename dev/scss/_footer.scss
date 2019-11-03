@@ -13,3 +13,9 @@ footer{
         font-family:$robotoLight;
     }
 }
+@include mq($largeTablet) {
+    footer{
+        height:39px;
+        font-size:.75em;
+    }
+}

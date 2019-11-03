@@ -21,7 +21,21 @@ body{
             
             a{
                 img{
-                    width: 250px;
+                    padding-bottom: calc(100% / (3/2));
+                    object-fit: none;
+                    object-position: 0 0;
+                    width: 187px;
+                    height: 21px;
+                    transform: scale(1.2);
+                    transition: all .1s ease;
+                    padding: 0;
+                    margin: 40px 0;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        object-position: 0 -21px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
