@@ -22,7 +22,7 @@ header{
     background-color: $backGroundColorLight;
     max-width: 1000px;
     margin: 0 auto;
-    z-index: 500;
+   // z-index: 500;
 
         .logo {
             margin: 0;
@@ -68,6 +68,8 @@ header{
                 display: flex;
                 height: auto;
                 position: relative;
+                padding-left:10px;
+                padding-right:10px;
             } 
             
             @at-root .inner-header {
