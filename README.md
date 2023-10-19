@@ -1,5 +1,5 @@
-# Front End Group Project
-This is a Front End group project for the Front End Project course.
+# Front End Project
+This is a Front End project using html, css and sass.
 
 ![](dist/images/MobileScreen.jpg) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](dist/images/SmallLowSizeScreen.jpg)
 
